@@ -7,15 +7,31 @@ Return Of Samus Editor - Instructions
 <h1>Return Of Samus Editor - Instructions</h1>
 <p> 
 </p>
-<h2>Object Editing</h2>
+<br><br><br><h2>File Handling</h2>
+    <img src="1.png"/>
+    <p>Obviously, you need to open a file first. Locate your <i>totally legal</i> copy of metroid 2 and open it, then hit "decode". It does not matter if it is a .gb, .gbc, or .bin file, as long as it is an actual ROM and the version stated <a href = "http://wiki.metroidconstruction.com/doku.php?id=return_of_samus">here, on the Metroid Construction Wiki</a>. DO NOT HIT DECODE IF YOU HAVE MADE EDITS, THEY WILL BE IMMIDIETLY AND IRREVERSABLY OVERWRITTEN(unless this is what you want). When you are ready to save, or make a backup, type the name you wish to save it under then hit "encode". If you wish to test it, hit "play" to use the built in Gameboy emulator for your convience (keeping in mind that color support is buggy and that I did NOT make it).</p>
+
+<br><br><br><h2>Tile Editing</h2>
+    <img src="4.png"/>
+    <h3>Prerequisite Information</h3>
+    <p>There are several concepts you need to understand before you go editing this. 1st off, what  a Bank is, and what Pointer, Scroll, Room Transition, and enemy data pointer mean. All of that information is <a href = "http://wiki.metroidconstruction.com/doku.php?id=return_of_samus:technical_information:level_data_banks">here, on the Metroid Construction Wiki</a>. Editing them is a simple mater, as long as things don't overlap with enemy data.</p>
+    <h3>The UI</h3>
+    <p>Mode allows you to switch between Tile, Samus, Object. I will only be covering Tile and Samus here. Samus is...placing Samus, aka setting the spawn point. Tile is probably what you expect: placing tiles. simply click on the tile you want within the tileset, then click within the chunk to place it. You can't "erase" tiles, only overwrite them. Change the chunk by seleciting it on the large grid, change the tileset with the "Tileset" selector, and change the bank with the "Bank" selector.</p>
+<br><br><br><h2>Object Editing</h2>
 
 <h3>Adding Objects</h3>
+    <img src="2.png"/><br>
+    <img src="3.png"/>
 <p>
-To add an object, change the mode selector to "Object", set the ID to whatever value you want, with 2 caviets: if you want the object to not respawn, set it between 40 and 7F, and try to avoid sharing ID's with multiple items on one screen. It will cause weird things to happen. The Object type should be self explanitory, and all known types are listed here: 
-<iframe src = "https://wiki.metroidconstruction.com/doku.php?id=return_of_samus:technical_information:enemy_data" width = "600px"></iframe><br>To know what enemy is what, check <a href="http://metroid.retropixel.net/games/metroid2/manual/metroid2_manual.pdf">the metroid 2 manual</a></p><br>
+To add an object, change the mode selector to "Object", and set the ID to whatever value you want, with 2 caviets: if you want the object to not respawn, set it between 40 and 7F, and try to avoid sharing ID's with multiple items on one screen. It will cause weird things to happen, and is not recommended (unless, for example, you want there to be 2+ instances of an object and they share a state). The Object type should be self explanitory, and all known types are listed  
+<a href = "http://wiki.metroidconstruction.com/doku.php?id=return_of_samus:technical_information:enemy_data">here, on the Metroid Construction Wiki</a> (what a useful resource!). You are limited to 16 objects per screen, as Metroid 2 cannot handle more then that in a safe manner. Also, don't go spawning 16 Omega Metroids on one screen (or any type of metroid, for that matter). For everyones sake.<br><br>To know what enemy is what, check <a href="http://metroid.retropixel.net/games/metroid2/manual/metroid2_manual.pdf">the metroid 2 manual</a></p>
 <h3>Deleting Objects</h3><p>
-to delete an object, locate which one you wish to delete via the "View Object Data" button, select it, via the selector right next to the "delete object" button, then press said button.
+to delete an object, locate which one you wish to delete via the "View Object Data" button, select it via the selector right next to the "delete object" button, then press said button.
 </p>
+    <br><br><br><h2>Room Transition editing</h2>
+    <img src="5.png"/>
+    <h3>Placeholder</h3>
+    <p>transition script editing does not exist in ROSE in any capacity yet.</p> 
 <br>
 </body>
 </html>
